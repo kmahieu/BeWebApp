@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using MongoDB.Driver;
+using StageService.AsyncDataServices;
 using StageService.Controllers;
 using StageService.Repositories;
 
@@ -25,6 +26,7 @@ builder.Services.AddHttpClient<StageController>();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
+builder.Services.AddScoped<IMessageBusClient, MessageBusClient>();
 
 
 var app = builder.Build();

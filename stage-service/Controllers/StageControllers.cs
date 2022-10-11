@@ -66,12 +66,10 @@ namespace StageService.Controllers
         [HttpPost]
         public async Task<ActionResult<Stage>> CreateTestMessage2([FromBody] Stage Stage)
         {
-        
-
             await _repository.CreateStage(Stage);
-
             return Ok();
         }
+
 
        [HttpPut("{id}", Name = "UpdateStage")]
         public async Task<IActionResult> UpdateStage(string id, [FromBody] Stage Stage)
