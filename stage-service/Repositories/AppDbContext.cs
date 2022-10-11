@@ -13,6 +13,6 @@ namespace StageService.Repositories
         {
             _db = client.GetDatabase(dbName);
         }
-        public IMongoCollection<Stage> Stage => _db.GetCollection<Stage>("Stage");
+        public IMongoCollection<Stage> stage => _db.GetCollection<Stage>("Stage");
     }
 }

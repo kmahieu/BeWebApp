@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
-namespace StageService.Models
+namespace DocumentService.Models
 {
     public class Stage
     {

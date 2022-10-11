@@ -67,5 +67,15 @@ namespace DocumentService.Controllers
             await _repository.DeleteDocument(id);
             return Ok();
         }
+
+         [HttpGet("stage/{id}", Name = "GetAllDocumentsByDocumentId")]
+         public async Task<ActionResult<IEnumerable<Document>>> GetAllDocumentsByDocumentId(string id)
+         {
+             
+            var stageItem = await _repository.GetAllDocumentsByStageId(id);
+
+            
+             return Ok(_mapper.Map<IEnumerable<Document>>(stageItem));
+         }
     }
 }

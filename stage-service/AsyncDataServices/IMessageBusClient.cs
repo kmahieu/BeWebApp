@@ -6,6 +6,6 @@ namespace StageService.AsyncDataServices
 {
     public interface IMessageBusClient
     {
-        void SupprPublicationById(Stage Stage);
+        void DelStageById(Stage Stage);
     }
 }

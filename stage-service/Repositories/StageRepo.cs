@@ -23,30 +23,30 @@ namespace StageService.Repositories
         {
             if (contact != null)
             {
-                await _context.Stage.InsertOneAsync(contact);
+                await _context.stage.InsertOneAsync(contact);
             }
         }
 
         public async Task<Stage> UpdateStage(string id, Stage Stage)
         {
-            return await _context.Stage.FindOneAndReplaceAsync(c => c.Id == id,
+            return await _context.stage.FindOneAndReplaceAsync(c => c.Id == id,
                 new Stage {Id = id, name = Stage.name });
         }
 
         public async Task<IEnumerable<Stage>> GetAllStage()
         {
-            return await _context.Stage.Find(_ => true).ToListAsync();
+            return await _context.stage.Find(_ => true).ToListAsync();
         }
 
         public async Task<Stage> GetStageById(string id)
         {
-            return await _context.Stage.Find(c => c.Id == id).SingleOrDefaultAsync();
+            return await _context.stage.Find(c => c.Id == id).SingleOrDefaultAsync();
         }
 
 
         public async Task DeleteStage(string id)
         {
-           await _context.Stage.DeleteOneAsync(c => c.Id == id);
+           await _context.stage.DeleteOneAsync(c => c.Id == id);
         }
 
 

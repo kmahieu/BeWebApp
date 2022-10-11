@@ -48,6 +48,12 @@ namespace DocumentService.Repositories
            await _context.document.DeleteOneAsync(c => c.Id == id);
         }
 
+        public async Task<IEnumerable<Document>> GetAllDocumentsByStageId(string id)
+        {
+           
+            return await _context.document.Find(c => c.stage_id == id).ToListAsync();
+        }
+
 
     }
 }

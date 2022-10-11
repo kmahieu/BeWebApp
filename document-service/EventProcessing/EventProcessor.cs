@@ -9,6 +9,7 @@ using System.Text;
 using Microsoft.Extensions.Configuration;
 using DocumentService.Models;
 using DocumentService.Dtos;
+using DocumentService.Repositories;
 
 namespace PublicationService.EventProcessing
 {
@@ -51,16 +52,13 @@ namespace PublicationService.EventProcessing
 
             switch(eventType.Event)
             {
-                /* "User_Updated" est la valeur attribuée dans le controller de UserService
-                lors de l'envoi de données 
-                Dans le cas ou la valeur de notre attribue Event est bien "User_Updated",
-                nous retournons notre objet */
+    
                 case "Stage_Deleted":
                 Console.WriteLine("--> Platform Stage Deleted Event Detected");
                 return EventType.StageDeleted;
            
                 default:
-                /* Sinon nous retournons que l'objet est indeterminé */
+    
                 Console.WriteLine("--> Could not determine the event type");
                 return EventType.Undetermined;
             }
@@ -76,15 +74,15 @@ namespace PublicationService.EventProcessing
             using (var scope = _scopeFactory.CreateScope())
             {
            
-                var repo = scope.ServiceProvider.GetRequiredService<Document>();
+                var repo = scope.ServiceProvider.GetRequiredService<IDocumentRepo>();
                 
         
-                var userUpdatedDto = JsonSerializer.Deserialize<Document>(DocumentUpdateMessage);
-                Console.WriteLine($"--> Document with Stage Id : {stageUpdated.Id} will be deleted"); 
+                var stag = JsonSerializer.Deserialize<Stage>(DocumentUpdateMessage);
+                Console.WriteLine($"--> Document with Stage Id : {stag.Id} will be deleted"); 
 
                 try
                 {
-                    var DocumentModelFromRepo = await repo.GetAllDocumentByStageId(stageUpdated.Id);
+                    var DocumentModelFromRepo = await repo.GetAllDocumentsByStageId(stag.Id);
 
                     Console.WriteLine(DocumentModelFromRepo);
                     // var PublicationModel = _mapper.Map<UserReadDto>(UserId);
@@ -93,14 +91,14 @@ namespace PublicationService.EventProcessing
                         var DocumentMap = new Document();
                         DocumentMap.Id = com.Id;
 
-                    await repo.DeleteDocumentById(com.Id);
+                    await repo.DeleteDocument(com.Id);
                     Console.WriteLine("--> Document Deleted");
                         
                     }               
 
                     if (DocumentModelFromRepo == null)
                     {
-                        Console.WriteLine("ERROR : Publication not found");
+                        Console.WriteLine("ERROR : Document not found");
                     }
                 
                     
