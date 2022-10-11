@@ -19,11 +19,11 @@ namespace StageService.Repositories
 
         }
 
-        public async Task CreateStage(Stage contact)
+        public async Task CreateStage(Stage stage)
         {
-            if (contact != null)
+            if (stage != null)
             {
-                await _context.stage.InsertOneAsync(contact);
+                await _context.stage.InsertOneAsync(stage);
             }
         }
 

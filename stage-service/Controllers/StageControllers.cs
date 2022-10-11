@@ -12,6 +12,7 @@ using StageService.Models;
 using StageService.Repositories;
 using System.Text;
 using StageService.AsyncDataServices;
+using StageService.Dtos;
 
 namespace StageService.Controllers
 {
@@ -56,18 +57,25 @@ namespace StageService.Controllers
         }
 
 
-        [HttpGet("{id}", Name = "GetContactById")]
-        public async Task<Stage> GetContactById(string id)
+        [HttpGet("{id}", Name = "GetStageById")]
+        public async Task<Stage> GetStageById(string id)
         {
             return await _repository.GetStageById(id);
         }
 
 
         [HttpPost]
-        public async Task<ActionResult<Stage>> CreateTestMessage2([FromBody] Stage Stage)
+        public async Task<IActionResult> CreateStage([FromBody] StageCreateDto Stage)
         {
-            await _repository.CreateStage(Stage);
-            return Ok();
+
+            var stageModel = _mapper.Map<Stage>(Stage);
+
+            await _repository.CreateStage(stageModel);
+
+            var stageReadDto = _mapper.Map<StageCreateDto>(stageModel);
+
+            return CreatedAtRoute(nameof(GetStageById), new { Id = stageModel.Id }, stageReadDto);
+
         }
 
 
