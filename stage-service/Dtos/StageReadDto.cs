@@ -8,9 +8,9 @@ using StageService.Models;
 
 namespace StageService.Dtos
 {
-    public class StageCreateDto
+    public class StageReadDto
     {
-        public string? Id { get; set; }
+        public string Id { get; set; }
         public string? name { get; set; }
         public ICollection<Document> document { get; set; } = new List<Document>();
 

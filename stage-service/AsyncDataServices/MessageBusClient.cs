@@ -3,6 +3,7 @@ using System.Text;
 using System.Text.Json;
 using Microsoft.Extensions.Configuration;
 using RabbitMQ.Client;
+using StageService.Dtos;
 using StageService.Models;
 
 namespace StageService.AsyncDataServices
@@ -44,15 +45,15 @@ namespace StageService.AsyncDataServices
         }
 
         // Cette méthode transforme les données en texte pour être envoyé à RabbitMQ (RabbitMQ n'accepte que du texte)
-        public void DelStageById(Stage Stage)
+        public void DelStageById(StageUpdatedDto stageUpdatedDto)
         {
-            var message = JsonSerializer.Serialize(Stage);
-            
+            var message = JsonSerializer.Serialize(stageUpdatedDto);
+            Console.WriteLine($"-->"+ message);
             if(_connection.IsOpen)
             {
                 Console.WriteLine("--> Updating deleted Stage to MessageBus");
                 // TODO envoyer le message au bus
-                SendMessage(message);
+               SendMessage(message);
             }
             else 
             {

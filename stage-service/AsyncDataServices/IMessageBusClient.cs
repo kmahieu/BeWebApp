@@ -1,11 +1,12 @@
 
 
+using StageService.Dtos;
 using StageService.Models;
 
 namespace StageService.AsyncDataServices
 {
     public interface IMessageBusClient
     {
-        void DelStageById(Stage Stage);
+        void DelStageById(StageUpdatedDto stage);
     }
 }

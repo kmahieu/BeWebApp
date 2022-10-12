@@ -46,7 +46,7 @@ namespace StageService.Controllers
             {
 
                 var documentsItem = await _httpClient.GetAsync($"{_configuration["DocumentService"]}" + "stage/" + stage.Id);
-
+                Console.WriteLine(documentsItem);
                 var documentsItemsDeserialize = JsonConvert.DeserializeObject<ICollection<Document>>(
                         await documentsItem.Content.ReadAsStringAsync());
 
@@ -72,9 +72,10 @@ namespace StageService.Controllers
 
             await _repository.CreateStage(stageModel);
 
-            var stageReadDto = _mapper.Map<StageCreateDto>(stageModel);
+            var stageReadDto = _mapper.Map<StageReadDto>(stageModel);
 
-            return CreatedAtRoute(nameof(GetStageById), new { Id = stageModel.Id }, stageReadDto);
+            return CreatedAtRoute(nameof(GetStageById), new { Id = stageReadDto.Id }, stageReadDto);
+
 
         }
 
@@ -92,25 +93,25 @@ namespace StageService.Controllers
         public async Task<ActionResult> DeleteStage(string id)
         {
             var stageItem = await _repository.GetStageById(id);
+            Console.WriteLine("-->"+stageItem.name);
+                var stageUpdatedDto = new StageUpdatedDto();
+                stageUpdatedDto.Id = stageItem.Id;
+                stageUpdatedDto.name = stageItem.name;
+                stageUpdatedDto.Event = "Stage_Deleted";
 
-            var stageContent = new StringContent(
-                Newtonsoft.Json.JsonConvert.SerializeObject(stageItem),
-                Encoding.UTF8,
-                "application/json");
             try
             {
-                
-                stageItem.Event = "Stage_Deleted";
+               
 
-                _messageBusClient.DelStageById(stageItem);
-            }
+               _messageBusClient.DelStageById(stageUpdatedDto);
 
+             }
             catch (System.Exception ex)
             {
                 Console.WriteLine("Error: Async " + ex.Message);
             }
 
-            if (stageItem != null)
+             if (stageItem != null)
             {
                 await _repository.DeleteStage(stageItem.Id);
                 return Ok();
@@ -119,7 +120,6 @@ namespace StageService.Controllers
             {
                 return NotFound();
             }
-            
             
         }
     }
