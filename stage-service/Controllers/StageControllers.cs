@@ -94,13 +94,12 @@ namespace StageService.Controllers
         {
             var stageItem = await _repository.GetStageById(id);
             Console.WriteLine("-->"+stageItem.name);
-                var stageUpdatedDto = new StageUpdatedDto();
-                stageUpdatedDto.Id = stageItem.Id;
-                stageUpdatedDto.name = stageItem.name;
-                stageUpdatedDto.Event = "Stage_Deleted";
 
             try
             {
+                var stageUpdatedDto = _mapper.Map<StageUpdatedDto>(stageItem);
+
+                stageUpdatedDto.Event = "Stage_Deleted";
                
 
                _messageBusClient.DelStageById(stageUpdatedDto);

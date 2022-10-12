@@ -26,7 +26,7 @@ builder.Services.AddHttpClient<StageController>();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
-builder.Services.AddSingleton<IMessageBusClient, MessageBusClient>();
+builder.Services.AddTransient<IMessageBusClient, MessageBusClient>();
 
 
 var app = builder.Build();

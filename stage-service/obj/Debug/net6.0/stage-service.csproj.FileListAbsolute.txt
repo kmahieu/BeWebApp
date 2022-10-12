@@ -94,3 +94,11 @@ C:\Users\kmahi\Desktop\BeWebApp\stage-service\obj\Debug\net6.0\refint\stage-serv
 C:\Users\kmahi\Desktop\BeWebApp\stage-service\obj\Debug\net6.0\stage-service.pdb
 C:\Users\kmahi\Desktop\BeWebApp\stage-service\obj\Debug\net6.0\stage-service.genruntimeconfig.cache
 C:\Users\kmahi\Desktop\BeWebApp\stage-service\obj\Debug\net6.0\ref\stage-service.dll
+C:\Users\kmahi\Desktop\BeWebApp\stage-service\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\kmahi\Desktop\BeWebApp\stage-service\bin\Debug\net6.0\appsettings.json
+C:\Users\kmahi\Desktop\BeWebApp\stage-service\bin\Debug\net6.0\appsettings.Production.json
+C:\Users\kmahi\Desktop\BeWebApp\stage-service\obj\Debug\net6.0\stage-service.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\kmahi\Desktop\BeWebApp\stage-service\obj\Debug\net6.0\stage-service.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\kmahi\Desktop\BeWebApp\stage-service\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\kmahi\Desktop\BeWebApp\stage-service\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\kmahi\Desktop\BeWebApp\stage-service\obj\Debug\net6.0\scopedcss\bundle\stage-service.styles.css

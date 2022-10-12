@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "I22piWTTRtzKfI+FyRgW2Tno5RYYrVGXpV+ZZskpvrc=",
+  "Source": "stage-service",
+  "BasePath": "_content/stage-service",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

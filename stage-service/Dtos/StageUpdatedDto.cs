@@ -16,8 +16,5 @@ namespace StageService.Dtos
         public string? Event { get; set; }
 
         public string? name { get; set; }
-
-        public ICollection<Document> document { get; set; } = new List<Document>();
-
     }
 }
