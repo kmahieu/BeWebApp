@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\kmahi\\Desktop\\BeWebApp\\stage-service\\stage-service.csproj",
+  "FilePath": "c:\\Users\\kmahi\\Desktop\\BeWebApp\\document-service\\document-service.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "6.0",
@@ -16295,7 +16295,7 @@
     ],
     "CSharpLanguageVersion": 1000
   },
-  "RootNamespace": "stage-service",
+  "RootNamespace": "document_service",
   "Documents": [],
   "SerializationFormat": "0.2"
 }

@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 
-namespace PublicationService.EventProcessing
+namespace DocumentService.EventProcessing
 {
   public interface IEventProcessor
   {

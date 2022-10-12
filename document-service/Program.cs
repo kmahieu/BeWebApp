@@ -1,4 +1,4 @@
-﻿using DocumentService.Controllers;
+using DocumentService.Controllers;
 using DocumentService.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -7,6 +7,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using MongoDB.Driver;
+using DocumentService.AsyncDataServices;
+using DocumentService.EventProcessing;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -24,6 +26,8 @@ builder.Services.AddHttpClient<DocumentController>();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
+builder.Services.AddHostedService<MessageBusSubscriber>();
+builder.Services.AddTransient<IEventProcessor, EventProcessor>(); 
 
 
 var app = builder.Build();

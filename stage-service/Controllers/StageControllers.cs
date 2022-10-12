@@ -24,8 +24,7 @@ namespace StageService.Controllers
          private readonly IMapper _mapper;
          private readonly HttpClient _httpClient;
          private readonly IConfiguration _configuration;
-
-        private readonly IMessageBusClient _messageBusClient;
+         private readonly IMessageBusClient _messageBusClient;
 
 
          public StageController(IStageRepo repository, IMapper mapper, HttpClient httpClient, IConfiguration configuration, IMessageBusClient messageBusClient)
@@ -34,6 +33,7 @@ namespace StageService.Controllers
              _mapper = mapper;
              _httpClient = httpClient;
              _configuration = configuration;
+             _messageBusClient = messageBusClient;
          }
 
         [HttpGet]
@@ -98,10 +98,10 @@ namespace StageService.Controllers
             try
             {
                 var stageUpdatedDto = _mapper.Map<StageUpdatedDto>(stageItem);
+                Console.WriteLine(stageUpdatedDto.name);
 
                 stageUpdatedDto.Event = "Stage_Deleted";
-               
-
+               Console.WriteLine(stageUpdatedDto.GetType());
                _messageBusClient.DelStageById(stageUpdatedDto);
 
              }

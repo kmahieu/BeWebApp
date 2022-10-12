@@ -14,6 +14,7 @@ namespace StageService.Profiles
             CreateMap<StageCreateDto, StageUpdatedDto>();
             CreateMap<Stage, StageUpdatedDto>();
             CreateMap<StageUpdatedDto, Stage>();
+            CreateMap<StageReadDto, StageUpdatedDto>();
 
             CreateMap<Stage, StageReadDto>();
 

@@ -3,11 +3,11 @@ using System;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using RabbitMQ.Client;
-using PublicationService.EventProcessing;
+using DocumentService.EventProcessing;
 using System.Threading.Tasks;
 using RabbitMQ.Client.Events;
 
-namespace PublicationService.AsyncDataServices
+namespace DocumentService.AsyncDataServices
 {
  // Ajout de BackgroundService pour écouter en arrière-plan
  public class MessageBusSubscriber : BackgroundService

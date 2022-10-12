@@ -11,7 +11,7 @@ using DocumentService.Models;
 using DocumentService.Dtos;
 using DocumentService.Repositories;
 
-namespace PublicationService.EventProcessing
+namespace DocumentService.EventProcessing
 {
     public class EventProcessor : IEventProcessor
     {

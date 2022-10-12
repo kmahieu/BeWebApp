@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "KfVqV8A+usz+if3tKMAOFIkwr6DzbDvRLdXM20YYauo=",
+  "Source": "document-service",
+  "BasePath": "_content/document-service",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

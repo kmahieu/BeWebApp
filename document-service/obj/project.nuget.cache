@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QHJzGaOwWaUZ/thZYOmcEh6p6yXJkRLuLLB+Pr/eYYHC3v1iZetoRO4ktH6yrQer0eSBfhCA+SJpUllfPUmiig==",
+  "dgSpecHash": "UDYScR59v5TtPSSm98y29C0rmlySqlaF62iXfyn7l7gqdeGDjU6QZYSsv6fUwOJ2e9/z/nuP/vPm1mUQiD2seg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\kmahi\\Desktop\\servicebeweb\\document-service\\document-service.csproj",
+  "projectFilePath": "C:\\Users\\kmahi\\Desktop\\BeWebApp\\doc\\document-service\\document-service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kmahi\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\kmahi\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",

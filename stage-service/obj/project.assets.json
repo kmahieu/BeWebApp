@@ -7078,11 +7078,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kmahi\\Desktop\\BeWebApp\\stage-service\\stage-service.csproj",
+      "projectUniqueName": "C:\\Users\\kmahi\\Desktop\\BeWebApp\\stage-web-service\\stage-service\\stage-service.csproj",
       "projectName": "stage-service",
-      "projectPath": "C:\\Users\\kmahi\\Desktop\\BeWebApp\\stage-service\\stage-service.csproj",
+      "projectPath": "C:\\Users\\kmahi\\Desktop\\BeWebApp\\stage-web-service\\stage-service\\stage-service.csproj",
       "packagesPath": "C:\\Users\\kmahi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kmahi\\Desktop\\BeWebApp\\stage-service\\obj\\",
+      "outputPath": "C:\\Users\\kmahi\\Desktop\\BeWebApp\\stage-web-service\\stage-service\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\kmahi\\AppData\\Roaming\\NuGet\\NuGet.Config"

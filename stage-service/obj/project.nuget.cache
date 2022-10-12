@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/D1GxXe+ox9oz1MgVIA0Dwb+7B3HoBnbu3LkLxMmcal58owa/pQC8oKPB/8EwtA9XOxlO9PvZs5gTE5Uoesw2w==",
+  "dgSpecHash": "d6VS/DfKlrX/SF/7AwFYNy9HM4ph/x+BWrVaJ5Ep7FvaIBq+mSCN5wTZoBiK4vmfPRzzlU/ZW7veALUehTTIxA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\kmahi\\Desktop\\BeWebApp\\stage-service\\stage-service.csproj",
+  "projectFilePath": "C:\\Users\\kmahi\\Desktop\\BeWebApp\\stage-web-service\\stage-service\\stage-service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kmahi\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\kmahi\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",

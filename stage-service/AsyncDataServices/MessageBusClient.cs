@@ -46,8 +46,10 @@ namespace StageService.AsyncDataServices
         }
 
         // Cette méthode transforme les données en texte pour être envoyé à RabbitMQ (RabbitMQ n'accepte que du texte)
-        public void DelStageById(StageUpdatedDto stageUpdatedDto)
+        public void DelStageById(StageUpdatedDto? stageUpdatedDto)
         {
+            Console.WriteLine("eeee");
+            Console.WriteLine(stageUpdatedDto);
             var message = JsonConvert.SerializeObject(stageUpdatedDto);
             Console.WriteLine($"-->"+ message);
             // if(_connection.IsOpen)

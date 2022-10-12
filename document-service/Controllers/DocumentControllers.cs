@@ -36,14 +36,14 @@ namespace DocumentService.Controllers
             return await _repository.GetAllDocument();
         }
 
-        [HttpGet("{id}", Name = "GetContactById")]
-        public async Task<Document> GetContactById(string id)
+        [HttpGet("{id}", Name = "GetDocumentById")]
+        public async Task<Document> GetDocumentById(string id)
         {
             return await _repository.GetDocumentById(id);
         }
 
         [HttpPost]
-        public async Task<ActionResult<Document>> CreateTestMessage2([FromBody] Document document)
+        public async Task<ActionResult<Document>> CreateDocument([FromBody] Document document)
         {
         
 
