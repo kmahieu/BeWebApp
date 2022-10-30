@@ -11,8 +11,9 @@ namespace StageService.Dtos
     public class StageCreateDto
     {
         public string? Id { get; set; }
-        public string? name { get; set; }
-        public ICollection<Document> document { get; set; } = new List<Document>();
+
+        public string name { get; set; }
+        public string[]? document { get; set; }
 
     }
 }

@@ -10,10 +10,9 @@ namespace StageService.Dtos
 {
     public class StageUpdatedDto
     {
-
         public string? Id { get; set; }
 
-        public string? Event { get; set; }
+        public string Event { get; set; }
 
         public string? name { get; set; }
     }

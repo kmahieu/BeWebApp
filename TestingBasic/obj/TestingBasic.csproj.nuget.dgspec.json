@@ -1,0 +1,61 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\kmahi\\Desktop\\BeWebApp\\TestingBasic\\TestingBasic.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\kmahi\\Desktop\\BeWebApp\\TestingBasic\\TestingBasic.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\kmahi\\Desktop\\BeWebApp\\TestingBasic\\TestingBasic.csproj",
+        "projectName": "TestingBasic",
+        "projectPath": "C:\\Users\\kmahi\\Desktop\\BeWebApp\\TestingBasic\\TestingBasic.csproj",
+        "packagesPath": "C:\\Users\\kmahi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kmahi\\Desktop\\BeWebApp\\TestingBasic\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\kmahi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -11,6 +11,7 @@ namespace StageService.Dtos
     public class StageReadDto
     {
         public string Id { get; set; }
+        [Required]
         public string? name { get; set; }
         public ICollection<Document> document { get; set; } = new List<Document>();
 

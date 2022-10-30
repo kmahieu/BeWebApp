@@ -52,16 +52,16 @@ namespace StageService.AsyncDataServices
             Console.WriteLine(stageUpdatedDto);
             var message = JsonConvert.SerializeObject(stageUpdatedDto);
             Console.WriteLine($"-->"+ message);
-            // if(_connection.IsOpen)
-            // {
+            if(_connection.IsOpen)
+            {
                 Console.WriteLine("--> Updating deleted Stage to MessageBus");
                 // TODO envoyer le message au bus
                SendMessage(message);
-            // }
-            // else 
-            // {
-            //     Console.WriteLine("--> RabbitMq connection is closed");
-            // }
+            }
+            else 
+            {
+                Console.WriteLine("--> RabbitMq connection is closed");
+            }
         }
         
         // Cette méthode envoie les données codées en UTF-8 dans le channel

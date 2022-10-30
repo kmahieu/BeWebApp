@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kmahi\\Desktop\\BeWebApp\\doc\\document-service\\document-service.csproj": {}
+    "C:\\Users\\kmahi\\Desktop\\BeWebApp\\document-service\\document-service.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kmahi\\Desktop\\BeWebApp\\doc\\document-service\\document-service.csproj": {
+    "C:\\Users\\kmahi\\Desktop\\BeWebApp\\document-service\\document-service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kmahi\\Desktop\\BeWebApp\\doc\\document-service\\document-service.csproj",
+        "projectUniqueName": "C:\\Users\\kmahi\\Desktop\\BeWebApp\\document-service\\document-service.csproj",
         "projectName": "document-service",
-        "projectPath": "C:\\Users\\kmahi\\Desktop\\BeWebApp\\doc\\document-service\\document-service.csproj",
+        "projectPath": "C:\\Users\\kmahi\\Desktop\\BeWebApp\\document-service\\document-service.csproj",
         "packagesPath": "C:\\Users\\kmahi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kmahi\\Desktop\\BeWebApp\\doc\\document-service\\obj\\",
+        "outputPath": "C:\\Users\\kmahi\\Desktop\\BeWebApp\\document-service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kmahi\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -96,7 +96,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

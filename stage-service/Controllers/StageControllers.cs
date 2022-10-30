@@ -48,7 +48,7 @@ namespace StageService.Controllers
                 var documentsItem = await _httpClient.GetAsync($"{_configuration["DocumentService"]}" + "stage/" + stage.Id);
                 Console.WriteLine(documentsItem);
                 var documentsItemsDeserialize = JsonConvert.DeserializeObject<ICollection<Document>>(
-                        await documentsItem.Content.ReadAsStringAsync());
+                await documentsItem.Content.ReadAsStringAsync());
 
                 stage.document = documentsItemsDeserialize;
             }
@@ -58,24 +58,38 @@ namespace StageService.Controllers
 
 
         [HttpGet("{id}", Name = "GetStageById")]
-        public async Task<Stage> GetStageById(string id)
+        public async Task<ActionResult<Stage>> GetStageById(string id)
         {
-            return await _repository.GetStageById(id);
+
+            var stageItem = await _repository.GetStageById(id);
+
+          
+                var documentsItem = await _httpClient.GetAsync($"{_configuration["DocumentService"]}" + "stage/" + stageItem.Id);
+                Console.WriteLine(documentsItem);
+                var documentsItemsDeserialize = JsonConvert.DeserializeObject<ICollection<Document>>(
+                await documentsItem.Content.ReadAsStringAsync());
+
+                stageItem.document = documentsItemsDeserialize;
+            
+            return Ok(stageItem);
         }
 
 
         [HttpPost]
-        public async Task<IActionResult> CreateStage([FromBody] StageCreateDto Stage)
+        public async Task<IActionResult> CreateStage( [FromBody] StageCreateDto Stage)
         {
 
             var stageModel = _mapper.Map<Stage>(Stage);
 
+            if(stageModel != null){
             await _repository.CreateStage(stageModel);
-
+            
             var stageReadDto = _mapper.Map<StageReadDto>(stageModel);
 
             return CreatedAtRoute(nameof(GetStageById), new { Id = stageReadDto.Id }, stageReadDto);
-
+            } else{
+                return BadRequest();
+            }
 
         }
 
@@ -83,11 +97,19 @@ namespace StageService.Controllers
        [HttpPut("{id}", Name = "UpdateStage")]
         public async Task<IActionResult> UpdateStage(string id, [FromBody] Stage Stage)
         {
-            
-            await _repository.UpdateStage(id, Stage);
 
+            var stageItem = _repository.GetStageById(id);
+            
+            if(stageItem == null)
+            {
+                return NotFound();
+            }
+            else{
+            await _repository.UpdateStage(id, Stage);
             return Ok();
+            }
         }
+
 
         [HttpDelete("{id}")]
         public async Task<ActionResult> DeleteStage(string id)

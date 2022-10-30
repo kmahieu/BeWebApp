@@ -68,7 +68,7 @@ namespace DocumentService.Controllers
             return Ok();
         }
 
-         [HttpGet("stage/{id}", Name = "GetAllDocumentsByDocumentId")]
+         [HttpGet("stage/{id}", Name = "GetAllDocumentsByStageId")]
          public async Task<ActionResult<IEnumerable<Document>>> GetAllDocumentsByDocumentId(string id)
          {
              

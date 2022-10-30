@@ -5,6 +5,7 @@ using MongoDB.Driver;
 using MongoDB.Bson;
 using System.Threading.Tasks;
 using StageService.Models;
+using StageService.Dtos;
 
 namespace StageService.Repositories
 {
@@ -14,9 +15,7 @@ namespace StageService.Repositories
 
         public StageRepo(AppDbContext context)
         {
-
             _context = context;
-
         }
 
         public async Task CreateStage(Stage stage)
@@ -36,6 +35,13 @@ namespace StageService.Repositories
         public async Task<IEnumerable<Stage>> GetAllStage()
         {
             return await _context.stage.Find(_ => true).ToListAsync();
+        }
+
+        public async Task<Stage> UpdateDoc(string id, Document[] stageDocument)
+        {
+            return await _context.stage.FindOneAndUpdateAsync(
+                Builders<Stage>.Filter.Where(u => u.Id == id), 
+                Builders<Stage>.Update.Set(u => u.document, stageDocument));
         }
 
         public async Task<Stage> GetStageById(string id)

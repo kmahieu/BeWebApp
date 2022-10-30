@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kmahi\\Desktop\\BeWebApp\\stage-web-service\\stage-service\\stage-service.csproj": {}
+    "C:\\Users\\kmahi\\Desktop\\BeWebApp\\stage-service\\stage-service.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kmahi\\Desktop\\BeWebApp\\stage-web-service\\stage-service\\stage-service.csproj": {
+    "C:\\Users\\kmahi\\Desktop\\BeWebApp\\stage-service\\stage-service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kmahi\\Desktop\\BeWebApp\\stage-web-service\\stage-service\\stage-service.csproj",
+        "projectUniqueName": "C:\\Users\\kmahi\\Desktop\\BeWebApp\\stage-service\\stage-service.csproj",
         "projectName": "stage-service",
-        "projectPath": "C:\\Users\\kmahi\\Desktop\\BeWebApp\\stage-web-service\\stage-service\\stage-service.csproj",
+        "projectPath": "C:\\Users\\kmahi\\Desktop\\BeWebApp\\stage-service\\stage-service.csproj",
         "packagesPath": "C:\\Users\\kmahi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kmahi\\Desktop\\BeWebApp\\stage-web-service\\stage-service\\obj\\",
+        "outputPath": "C:\\Users\\kmahi\\Desktop\\BeWebApp\\stage-service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kmahi\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -96,7 +96,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

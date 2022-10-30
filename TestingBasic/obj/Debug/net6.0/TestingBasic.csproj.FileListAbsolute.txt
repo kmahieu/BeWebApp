@@ -1,0 +1,15 @@
+C:\Users\kmahi\Desktop\BeWebApp\TestingBasic\bin\Debug\net6.0\TestingBasic.exe
+C:\Users\kmahi\Desktop\BeWebApp\TestingBasic\bin\Debug\net6.0\TestingBasic.deps.json
+C:\Users\kmahi\Desktop\BeWebApp\TestingBasic\bin\Debug\net6.0\TestingBasic.runtimeconfig.json
+C:\Users\kmahi\Desktop\BeWebApp\TestingBasic\bin\Debug\net6.0\TestingBasic.dll
+C:\Users\kmahi\Desktop\BeWebApp\TestingBasic\bin\Debug\net6.0\TestingBasic.pdb
+C:\Users\kmahi\Desktop\BeWebApp\TestingBasic\obj\Debug\net6.0\TestingBasic.csproj.AssemblyReference.cache
+C:\Users\kmahi\Desktop\BeWebApp\TestingBasic\obj\Debug\net6.0\TestingBasic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kmahi\Desktop\BeWebApp\TestingBasic\obj\Debug\net6.0\TestingBasic.AssemblyInfoInputs.cache
+C:\Users\kmahi\Desktop\BeWebApp\TestingBasic\obj\Debug\net6.0\TestingBasic.AssemblyInfo.cs
+C:\Users\kmahi\Desktop\BeWebApp\TestingBasic\obj\Debug\net6.0\TestingBasic.csproj.CoreCompileInputs.cache
+C:\Users\kmahi\Desktop\BeWebApp\TestingBasic\obj\Debug\net6.0\TestingBasic.dll
+C:\Users\kmahi\Desktop\BeWebApp\TestingBasic\obj\Debug\net6.0\refint\TestingBasic.dll
+C:\Users\kmahi\Desktop\BeWebApp\TestingBasic\obj\Debug\net6.0\TestingBasic.pdb
+C:\Users\kmahi\Desktop\BeWebApp\TestingBasic\obj\Debug\net6.0\TestingBasic.genruntimeconfig.cache
+C:\Users\kmahi\Desktop\BeWebApp\TestingBasic\obj\Debug\net6.0\ref\TestingBasic.dll

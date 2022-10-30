@@ -13,10 +13,9 @@ namespace StageService.Models
         [BsonRepresentation(BsonType.ObjectId)]
         public string? Id { get; set; }
 
-        public string? Event {get; set; }
-        public string? name { get; set; }
-
-        public ICollection<Document> document { get; set; } = new List<Document>();
+        public string? Event { get; set; }
+        public string name { get; set; }
+        public ICollection<Document>? document { get; set; } = new List<Document>();
 
     }
 }
